@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Cloud Juggler",
+    "version": "1.0",
+    "description": "Makes navigating the AWS One-Login site a breeze, juggling all your cloud services with ease and a touch of humor!",
+    "icons": {
+      "48": "icons/cloud-juggler-48.png",
+      "96": "icons/cloud-juggler-96.png"
+    },
+    "permissions": [
+      "activeTab",
+      "https://signin.aws.amazon.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://signin.aws.amazon.com/*"],
+        "js": ["scripts/contentScripts.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/cloud-juggler-16.png",
+        "48": "icons/cloud-juggler-48.png",
+        "128": "icons/cloud-juggler-128.png"
+      }
+    }
+  }
+  
